@@ -24,7 +24,7 @@ angular.module('registries')
 		"menu.company.title": "Organizácia",
 		"menu.my.profile.title": "Môj profil",
 		"menu.permissions.title": "Oprávnenia",
-		"menu.schemas.title": "Schémy",
+		"menu.schemas.title": "Schémy"
 		
 		"menu.new.person.lower.level": "Nová osoba",
 		"menu.new.company.lower.level": "Nová spoločnosť",
@@ -356,6 +356,51 @@ angular.module('registries')
 		"schema.transfer.active.yes":"Áno",
 		"schema.transfer.active.no":"Nie",
 		
+		"schema.roster.new":"Nová súpiska",
+		"schema.roster.view":"Detail súpisky",
+		"schema.roster.search":"Súpiska",
+		"schema.roster.baseData":"Základné údaje",
+		"schema.roster.prName":"Názov družstva",
+		"schema.roster.club":"Klub",
+		"schema.roster.season":"Súťažný ročník",
+		"schema.roster.gender":"Pohlavie",
+		"schema.roster.ageCategory":"Veková kategória",
+		"schema.roster.competition":"Súťaž",
+		"schema.roster.lastModification":"Dátum poslednej modifikácie",
+		"schema.roster.coaches":"Tréneri",
+		"schema.roster.coach":"Tréner",
+		"schema.roster.aCoach":"Asistent trénera",
+		"schema.roster.listOfPlayers":"Zoznam hráčov",
+		"schema.roster.players":"Hráči",
+		
+		"schema.ageCategory.new":"Nová veková kategória",
+		"schema.ageCategory.view":"Veková kategória",
+		"schema.ageCategory.search":"Veková kategória",
+		"schema.ageCategory.name":"Názov kategórie",
+		"schema.ageCategory.description":"Popis",
+		"schema.ageCategory.computation":"Údaje pre výpočet",
+		"schema.ageCategory.day":"Deň",
+		"schema.ageCategory.month":"Mesiac",
+		"schema.ageCategory.year":"Rok",
+		"schema.ageCategory.operation":"Operácia",		
+		
+		"schema.season.new":"Nový súťažný ročník",
+		"schema.season.view":"Súťažný ročník",
+		"schema.season.search":"Súťažný ročník",
+		"schema.season.baseData":"Základné údaje",
+		"schema.season.name":"Názov súťaže",
+		"schema.season.startSeason":"Dátum začiatku",
+		"schema.season.endSeason":"Dátum konca",
+		
+		"schema.competition.new":"Nová súťaž",
+		"schema.competition.view":"Detail súťaže",
+		"schema.competition.search":"Súťaž",
+		"schema.competition.baseData":"Základné údaje",
+		"schema.competition.name":"Názov súťaže",
+		"schema.competition.season":"Súťažný ročnik",
+		"schema.competition.association":"Zväz",
+		"schema.competition.ageCategory":"Veková kategória",
+		"schema.competition.competitionLevel":"Úroveň súťaže",
 		"schema.competition.gender.man":"Muž",
 		"schema.competition.gender.woman":"Žena",
 		
@@ -393,7 +438,17 @@ angular.module('registries')
 		"schema.member.title": "Môj profil",
 		"schema.member.new":"Nová osoba",
 		"schema.member.view":"Profil osoby",
-		"schema.member.search":"Osoba"
+		"schema.member.search":"Osoba",
+		
+		"schema.group.baseData":"Základné údaje",
+		"schema.group.baseData.id":"Identifikátor",
+		"schema.group.baseData.name":"Názov skupiny",
+		"schema.group.baseData.parent":"Rodič",
+		
+		"schema.security.baseData":"Základné údaje",
+		"schema.security.baseData.name":"Názov",
+		
+		"schema.securityMaster.new":"Nový bezpečnostný profil"
 	});
 	
 	$translateProvider.translations('cz', {
@@ -743,6 +798,51 @@ angular.module('registries')
 		"schema.transfer.active.yes":"Áno",
 		"schema.transfer.active.no":"Nie",
 		
+		"schema.roster.new":"Nová súpiska",
+		"schema.roster.view":"Detail súpisky",
+		"schema.roster.search":"Súpiska",
+		"schema.roster.baseData":"Základné údaje",
+		"schema.roster.prName":"Názov družstva",
+		"schema.roster.club":"Klub",
+		"schema.roster.season":"Súťažný ročník",
+		"schema.roster.gender":"Pohlavie",
+		"schema.roster.ageCategory":"Veková kategória",
+		"schema.roster.competition":"Súťaž",
+		"schema.roster.lastModification":"Dátum poslednej modifikácie",
+		"schema.roster.coaches":"Tréneri",
+		"schema.roster.coach":"Tréner",
+		"schema.roster.aCoach":"Asistent trénera",
+		"schema.roster.listOfPlayers":"Zoznam hráčov",
+		"schema.roster.players":"Hráči",
+		
+		"schema.ageCategory.new":"Nová veková kategória",
+		"schema.ageCategory.view":"Veková kategória",
+		"schema.ageCategory.search":"Veková kategória",
+		"schema.ageCategory.name":"Názov kategórie",
+		"schema.ageCategory.description":"Popis",
+		"schema.ageCategory.computation":"Údaje pre výpočet",
+		"schema.ageCategory.day":"Deň",
+		"schema.ageCategory.month":"Mesiac",
+		"schema.ageCategory.year":"Rok",
+		"schema.ageCategory.operation":"Operácia",		
+		
+		"schema.season.new":"Nový súťažný ročník",
+		"schema.season.view":"Súťažný ročník",
+		"schema.season.search":"Súťažný ročník",
+		"schema.season.baseData":"Základné údaje",
+		"schema.season.name":"Názov súťaže",
+		"schema.season.startSeason":"Dátum začiatku",
+		"schema.season.endSeason":"Dátum konca",
+	
+		"schema.competition.new":"Nová súťaž",
+		"schema.competition.view":"Detail súťaže",
+		"schema.competition.search":"Súťaž",
+		"schema.competition.baseData":"Základné údaje",
+		"schema.competition.name":"Názov súťaže",
+		"schema.competition.season":"Súťažný ročnik",
+		"schema.competition.association":"Zväz",
+		"schema.competition.ageCategory":"Veková kategória",
+		"schema.competition.competitionLevel":"Úroveň súťaže",
 		"schema.competition.gender.man":"Muž",
 		"schema.competition.gender.woman":"Žena",
 		
@@ -780,6 +880,16 @@ angular.module('registries')
 		"schema.member.title": "Môj profil",
 		"schema.member.new":"Nová osoba",
 		"schema.member.view":"Profil osoby",
-		"schema.member.search":"Osoba"
+		"schema.member.search":"Osoba",
+		
+		"schema.group.baseData":"Základné údaje",
+		"schema.group.baseData.id":"Identifikátor",
+		"schema.group.baseData.name":"Názov skupiny",
+		"schema.group.baseData.parent":"Rodič",
+		
+		"schema.security.baseData":"Základné údaje",
+		"schema.security.baseData.name":"Názov",
+		
+		"schema.securityMaster.new":"Nový bezpečnostný profil"
 	});
 }]);
