@@ -19,7 +19,7 @@
 
         "properties": {
             "baseData": {
-                "title": "Základné údaje",
+                "title": "Základné informácie",
                 "transCode": "schema.event.baseData",
 				"type": "object",
 				"properties": {

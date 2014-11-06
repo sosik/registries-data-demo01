@@ -5,24 +5,18 @@
         "table": "organizations",
         "title": "Nový klub",
         "transCode":"schema.club.new",
+        "_security": {
+            "$ref": "uri://registries/organization#_security"
+        },
         "properties": {
-            "_security": {
-                "$ref": "uri://registries/organization#properties/_security"
-            },
             "club": {
                 "$ref": "uri://registries/organization#properties/club"
-            },
-            "clubAdress": {
-                "$ref": "uri://registries/organization#properties/clubAdress"
             },
             "logoInfo": {
                 "$ref": "uri://registries/organization#properties/logoInfo"
             },
             "contactInfo": {
                 "$ref": "uri://registries/organization#properties/contactInfo"
-            },
-            "bankInfo": {
-                "$ref": "uri://registries/organization#properties/bankInfo"
             }
         }
     },
@@ -31,23 +25,14 @@
         "title": "Klub",
         "transCode": "schema.club.view",
         "properties": {
-            "_security": {
-                "$ref": "uri://registries/organization#properties/_security"
-            },
             "club": {
                 "$ref": "uri://registries/organization#properties/club"
-            },
-            "clubAdress": {
-                "$ref": "uri://registries/organization#properties/clubAdress"
             },
             "logoInfo": {
                 "$ref": "uri://registries/organization#properties/logoInfo"
             },
             "contactInfo": {
                 "$ref": "uri://registries/organization#properties/contactInfo"
-            },
-            "bankInfo": {
-                "$ref": "uri://registries/organization#properties/bankInfo"
             }
         }
     },
@@ -73,17 +58,11 @@
             }
         ],
         "properties": {
-            "contactInfo": {
-                "$ref": "uri://registries/organization#properties/contactInfo"
-            },
-            "bankInfo": {
-                "$ref": "uri://registries/organization#properties/bankInfo"
-            },
             "club": {
                 "$ref": "uri://registries/organization#properties/club"
             },
-            "clubAdress": {
-                "$ref": "uri://registries/organization#properties/clubAdress"
+            "contactInfo": {
+                "$ref": "uri://registries/organization#properties/contactInfo"
             }
         }
     }

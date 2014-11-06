@@ -5,9 +5,15 @@
 		"table" : "people",
 		"title" : "Nová osoba",
 		"transCode": "schema.member.new",
+		"_security": {
+			"$ref": "uri://registries/people#person/_security"
+		},
 		"properties" : {
 			"baseData" : {
 				"$ref": "uri://registries/people#person/properties/baseData"
+			},
+			"photoInfo": {
+				"$ref": "uri://registries/people#person/properties/photoInfo"
 			},
 			"player": {
 				"$ref": "uri://registries/people#person/properties/player"
@@ -21,27 +27,11 @@
 			"officer": {
 				"$ref": "uri://registries/people#person/properties/officer"
 			},
-			"medic": {
-				"$ref": "uri://registries/people#person/properties/medic"
-			},
-			"statistic": {
-				"$ref": "uri://registries/people#person/properties/statistic"
-			},
-			"photoInfo": {
-				"$ref": "uri://registries/people#person/properties/photoInfo"
-			},
 			"contactInfo": {
 				"$ref": "uri://registries/people#person/properties/contactInfo"
-			},
-			"otherInfo": {
-				"$ref": "uri://registries/people#person/properties/otherInfo"
-			},
-			"idInfo": {
-				"$ref": "uri://registries/people#person/properties/idInfo"
 			}
 		}
 	},
-	
 	"view" : {
 		"table": "people",
     	"title": "Profil osoby",
@@ -53,6 +43,9 @@
 			"baseData" : {
 				"$ref": "uri://registries/people#person/properties/baseData"
 			},
+			"photoInfo": {
+				"$ref": "uri://registries/people#person/properties/photoInfo"
+			},
 			"player": {
 				"$ref": "uri://registries/people#person/properties/player"
 			},
@@ -65,27 +58,11 @@
 			"officer": {
 				"$ref": "uri://registries/people#person/properties/officer"
 			},
-			"medic": {
-				"$ref": "uri://registries/people#person/properties/medic"
-			},
-			"statistic": {
-				"$ref": "uri://registries/people#person/properties/statistic"
-			},
-			"photoInfo": {
-				"$ref": "uri://registries/people#person/properties/photoInfo"
-			},
 			"contactInfo": {
 				"$ref": "uri://registries/people#person/properties/contactInfo"
-			},
-			"otherInfo": {
-				"$ref": "uri://registries/people#person/properties/otherInfo"
-			},
-			"idInfo": {
-				"$ref": "uri://registries/people#person/properties/idInfo"
 			}
         }
 	},
-	
 	"search" : {
 		"table": "people",
     	"title": "Osoba",
@@ -103,9 +80,6 @@
             "bankInfo": {
                 "$ref": "uri://registries/people#person/properties/bankInfo"
             },
-            "otherInfo": {
-                "$ref": "uri://registries/people#person/properties/otherInfo"
-            },
             "coach": {
 				"$ref": "uri://registries/people#person/properties/coach"
 			},
@@ -117,12 +91,6 @@
 			},
 			"officer": {
 				"$ref": "uri://registries/people#person/properties/officer"
-			},
-			"statistic": {
-				"$ref": "uri://registries/people#person/properties/statistic"
-			},
-			"medic": {
-				"$ref": "uri://registries/people#person/properties/medic"
 			}
         }
 	}

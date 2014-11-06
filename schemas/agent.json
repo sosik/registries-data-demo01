@@ -3,6 +3,10 @@
 	"id" : "uri://registries/agent#",
 	"new" : {
 		"table" : "people",
+		"title": "Agent",
+        "_security": {
+            "$ref": "uri://registries/people#person/_security"
+        },
 		"properties" : {
 			"baseData" : {
 				"$ref": "uri://registries/people#person/properties/baseData"

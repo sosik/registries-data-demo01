@@ -4,10 +4,10 @@
     "new": {
         "table": "people",
         "title": "Zdravotník",
+        "_security": {
+            "$ref": "uri://registries/people#person/_security"
+        },
         "properties": {
-            "_security": {
-                "$ref": "uri://registries/people#person/properties/_security"
-            },
             "baseData": {
                 "$ref": "uri://registries/people#person/properties/baseData"
             },
@@ -32,6 +32,9 @@
         "table": "people",
         "title": "Profil zdravotníka",
         "transCode":"schema.people.medic.view",
+        "_security": {
+            "$ref": "uri://registries/people#person/_security"
+        },
         "properties": {
 	        "$ref": "uri://registries/medic#new/properties"
         }

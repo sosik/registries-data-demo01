@@ -3,6 +3,23 @@
     "id": "uri://registries/organization#",
     "table": "organizations",
     "title": "Organizacie",
+    "_security": {
+        "_create": {
+            "_static": [
+                "Security - write"
+            ]
+        },
+        "_read": {
+            "_static": [
+                "Security - read"
+            ]
+        },
+        "_modify": {
+            "_static": [
+                "Security - write"
+            ]
+        }
+    },
     "listFields": [
         {
             "field": "id",
@@ -14,23 +31,6 @@
         }
     ],
     "properties": {
-        "_security": {
-            "_create": {
-                "_static": [
-                    "Security - write"
-                ]
-            },
-            "_read": {
-                "_static": [
-                    "Security - read"
-                ]
-            },
-            "_modify": {
-                "_static": [
-                    "Security - write"
-                ]
-            }
-        },
         "baseData": {
             "title": "Základné údaje",
             "transCode": "schema.org.baseData",
@@ -55,27 +55,11 @@
             "transCode": "schema.org.club.baseData",
             "type": "object",
             "properties": {
-                "codeOfClub": {
-                    "title": "Kód klubu",
-                    "transCode":"schema.org.club.codeOfClub",
-                    "type": "string",
-                    "required": false,
-                    "$sequence": "clubs"
-                },
                 "name": {
                     "title": "Názov klubu",
                     "transCode": "schema.org.club.name",
                     "type": "string",
                     "required": false
-                },
-                "association": {
-                    "title": "Zväz",
-                    "transCode": "schema.org.club.association",
-                    "required": false,
-                    "$objectLink": {
-                        "registry": "organizations",
-						"name": "association.associationName"
-                    }
                 },
                 "ico": {
                     "title": "IČO",
@@ -112,24 +96,6 @@
 					"enumTransCodes":[
 						"schema.club.state.active",
 						"schema.club.state.inactive"
-					],
-                    "required": false,
-                    "render": {
-                        "component": "psui-selectbox",
-                        "searchable": true
-                    }
-                },
-                "notPaying": {
-                    "title": "Neplatič",
-                    "transCode": "schema.org.club.notPaying",
-                    "type": "string",
-                    "enum": [
-                        "Áno",
-                        "Nie"
-                    ],
-					"enumTransCodes":[
-						"schema.club.notPaying.yes",
-						"schema.club.notPaying.no"
 					],
                     "required": false,
                     "render": {
@@ -345,6 +311,12 @@
             "transCode": "schema.org.contactInfo",
             "type": "object",
             "properties": {
+                "contactPerson": {
+                    "title": "Kontaktná osoba",
+                    "transCode": "schema.org.club.contactPerson",
+                    "type": "string",
+                    "required": false
+                },
                 "street": {
                     "title": "Ulica",
                     "transCode": "schema.org.street",

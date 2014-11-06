@@ -4,10 +4,10 @@
     "new": {
         "table": "people",
         "title": "Rozhodca",
+        "_security": {
+            "$ref": "uri://registries/people#person/_security"
+        },
         "properties": {
-            "_security": {
-                "$ref": "uri://registries/people#person/properties/_security"
-            },
             "baseData": {
                 "$ref": "uri://registries/people#person/properties/baseData"
             },
