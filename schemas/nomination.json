@@ -3,42 +3,41 @@
     "id": "uri://registries/nomination#",
     "new": {
         "title": "Nová nominácia",
-        "xxtransCode": "schema.stadium.title",
+        "transCode": "schema.nomination.new",
         "table": "nominations",
         "_security": {
             "_create": {
                 "_static": [
-                    "Security - write"
+                    "Registry - write"
                 ]
             },
             "_read": {
                 "_static": [
-                    "Security - read"
+                    "Registry - read"
                 ]
             },
             "_modify": {
                 "_static": [
-                    "Security - write"
+                    "Registry - write"
                 ]
             }
         },
         "listFields": [
             {
-                "field": "baseData.match.refData",
-                "title": "Domáce družstvo"
-            },
-            {
-                "field": "baseData.matchDate.refData.name",
-                "title": "Termín"
+                "field": "baseData.match",
+                "title": "Stretnutie",
+                "transCode": "schema.nomination.listFields.match"
             }
         ],
         "properties": {
             "baseData": {
                 "title": "Základné informácie",
+                "transCode": "schema.nomination.baseData",
                 "type": "object",
                 "properties": {
                     "match": {
                         "title": "Stretnutie",
+                        "transCode": "schema.nomination.match",
                         "type": "object",
                         "required": true,
                         "$objectLink": {
@@ -47,11 +46,22 @@
                             "awayClub": "baseData.awayClub",
                             "matchDate": "baseData.matchDate"
                         }
+                    },
+                    "club": {
+                        "title": "Klub",
+                        "transCode": "schema.nomination.club",
+                        "type": "object",
+                        "required": true,
+                        "$objectLink": {
+                            "registry": "organizations",
+                            "club": "club.name"
+                        }
                     }
                 }
             },
 	    	"officers": {
-	            "title": "Funkcionári družstva",
+	            "title": "Funkcionári",
+                "transCode": "schema.nomination.officers",
 	            "type": "object",
 				"render": {
 					"width": "full"
@@ -59,6 +69,7 @@
 	            "properties": {
 	                "coach": {
 	                    "title": "Tréner",
+                        "transCode": "schema.nomination.coach",
 	                    "type": "object",
 	                    "$objectLink": {
 	                        "registry": "people",
@@ -77,6 +88,7 @@
 	                },
 	                "aCoach1": {
 	                    "title": "Asistent Trénera",
+                        "transCode": "schema.nomination.aCoach1",
 	                    "type": "object",
 	                    "$objectLink": {
 	                        "registry": "people",
@@ -95,6 +107,7 @@
 	                },
 	                "aCoach2": {
 	                    "title": "Asistent Trénera",
+                        "transCode": "schema.nomination.aCoach2",
 	                    "type": "object",
 	                    "$objectLink": {
 	                        "registry": "people",
@@ -113,6 +126,7 @@
 	                },
 	                "officer1": {
 	                    "title": "Funkcionár",
+                        "transCode": "schema.nomination.officer1",
 	                    "type": "object",
 	                    "$objectLink": {
 	                        "registry": "people",
@@ -129,6 +143,7 @@
 	                },
 	                "officer2": {
 	                    "title": "Funkcionár",
+                        "transCode": "schema.nomination.officer2",
 	                    "type": "object",
 	                    "$objectLink": {
 	                        "registry": "people",
@@ -147,6 +162,7 @@
             },
             "listOfPlayers": {
                 "title": "Nominácia hráčov",
+                "transCode": "schema.nomination.listOfPlayers",
                 "type": "object",
 				"render": {
 					"width": "full"
@@ -154,6 +170,7 @@
                 "properties": {
                     "players": {
                         "title": "Hráči",
+                        "transCode": "schema.nomination.players",
                         "type": "array",
                         "items": {
                             "$objectLink": {
@@ -175,7 +192,7 @@
                     },
                     "state": {
                         "title": "Stav",
-                        "xxtransCode": "schema.people.title.after",
+                        "transCode": "schema.nomination.state",
                         "type": "string",
                         "required": true,
                         "enum": [
@@ -193,7 +210,7 @@
     },
     "view": {
         "title": "Nominácia",
-        "xxtransCode": "schema.match.view",
+        "transCode": "schema.nomination.view",
         "table": "nominations",
         "listFields": {
             "$ref": "uri://registries/nomination#new/listFields"
@@ -204,7 +221,7 @@
     },
     "search": {
         "title": "Nominácia",
-        "xxtransCode": "schema.match.search",
+        "transCode": "schema.nomination.search",
         "table": "nominations",
         "listFields": {
             "$ref": "uri://registries/nomination#new/listFields"

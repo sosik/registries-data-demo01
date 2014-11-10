@@ -8,24 +8,25 @@
 		"_security": {
 			"_create": {
 				"_static": [
-					"Security - write"
+					"Registry - write"
 				]
 			},
 			"_read": {
 				"_static": [
-					"Security - read"
+					"Registry - read"
 				]
 			},
 			"_modify": {
 				"_static": [
-					"Security - write"
+					"Registry - write"
 				]
 			}
 		},
 		"listFields": [
 			{
 				"field":"baseData.name",
-				"title":"Názov ročníka"
+				"title":"Názov ročníka",
+				"transCode":"schema.season.listFields.name"
 			}
 		],
 		"properties":{

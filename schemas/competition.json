@@ -8,24 +8,25 @@
         "_security": {
             "_create": {
                 "_static": [
-                    "Security - write"
+                    "Registry - write"
                 ]
             },
             "_read": {
                 "_static": [
-                    "Security - read"
+                    "Registry - read"
                 ]
             },
             "_modify": {
                 "_static": [
-                    "Security - write"
+                    "Registry - write"
                 ]
             }
         },
         "listFields": [
             {
                 "field": "baseData.name",
-                "title": "Názov súťaže"
+                "title": "Názov súťaže",
+                "transCode":"schema.competition.listFields.name"
             }
         ],
         "properties": {
@@ -46,16 +47,6 @@
                         "$objectLink": {
                             "registry": "seasons",
                             "name": "baseData.name"
-                        },
-                        "required": true
-                    },
-                    "association": {
-                        "title": "Zväz",
-                        "transCode": "schema.competition.association",
-                        "type": "object",
-                        "$objectLink": {
-                            "registry": "organizations",
-                            "name": "association.associationName"
                         },
                         "required": true
                     },
@@ -91,7 +82,7 @@
                         "title": "Úroveň súťaže",
                         "transCode": "schema.competition.competitionLevel",
                         "type": "integer",
-                        "required": true
+                        "required": false
                     }
                 }
             }

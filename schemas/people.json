@@ -6,36 +6,40 @@
     "_security": {
         "_create": {
             "_static": [
-                "Security - write"
+                "Registry - write"
             ]
         },
         "_read": {
             "_static": [
-                "Security - read"
+                "Registry - read"
             ]
         },
         "_modify": {
             "_static": [
-                "Security - write"
+                "Registry - write"
             ]
         }
     },
     "listFields": [
         {
             "field": "baseData.surName",
-            "title": "Priezvisko"
+            "title": "Priezvisko",
+            "transCode": "schema.people.listFields.surName"
         },
         {
             "field": "baseData.name",
-            "title": "Meno"
+            "title": "Meno",
+            "transCode": "schema.people.listFields.name"
         },
         {
             "field": "baseData.birthDate",
-            "title": "Dátum narodenia"
+            "title": "Dátum narodenia",
+            "transCode": "schema.people.listFields.birthDate"
         },
         {
             "field": "contactInfo.city",
-            "title": "Mesto"
+            "title": "Mesto",
+            "transCode": "schema.people.listFields.city"
         }
     ],
     "properties": {
@@ -188,24 +192,24 @@
             "type": "object",
             "listFields": [
                 {
-                    "field": "coach.coachLicense",
-                    "title": "Číslo Lic"
-                },
-                {
                     "field": "baseData.surName",
-                    "title": "Priezvisko"
+                    "title": "Priezvisko",
+                    "transCode": "schema.people.listFields.surName"
                 },
                 {
                     "field": "baseData.name",
-                    "title": "Meno"
+                    "title": "Meno",
+                    "transCode": "schema.people.listFields.name"
                 },
                 {
                     "field": "baseData.birthDate",
-                    "title": "Dátum narodenia"
+                    "title": "Dátum narodenia",
+                    "transCode": "schema.people.listFields.birthDate"
                 },
                 {
                     "field": "contactInfo.city",
-                    "title": "Mesto"
+                    "title": "Mesto",
+                    "transCode": "schema.people.listFields.city"
                 }
             ],
             "properties": {
@@ -606,24 +610,24 @@
             "type": "object",
             "listFields": [
                 {
-                    "field": "player.playerLicense",
-                    "title": "Číslo HL"
-                },
-                {
                     "field": "baseData.surName",
-                    "title": "Priezvisko"
+                    "title": "Priezvisko",
+                    "transCode": "schema.people.listFields.surName"
                 },
                 {
                     "field": "baseData.name",
-                    "title": "Meno"
+                    "title": "Meno",
+                    "transCode": "schema.people.listFields.name"
                 },
                 {
                     "field": "baseData.birthDate",
-                    "title": "Dátum narodenia"
+                    "title": "Dátum narodenia",
+                    "transCode": "schema.people.listFields.birthDate"
                 },
                 {
-                    "field": "contactInfo.city",
-                    "title": "Mesto"
+                    "field": "player.club",
+                    "title": "Klubová príslušnosť",
+                    "transCode": "schema.people.listFields.club"
                 }
             ],
             "properties": {
@@ -745,8 +749,8 @@
                     "required": false,
                     "render": {
                         "component": "psui-uploadable-image",
-                        "height": 400,
-                        "width": 300
+                        "height": 300,
+                        "width": 220
                     }
                 }
             }

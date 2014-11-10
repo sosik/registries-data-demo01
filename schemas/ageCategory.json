@@ -8,24 +8,25 @@
 		"_security":{  
 			"_create":{  
 			   "_static":[  
-			      "Security - write"
+			      "Registry - write"
 			   ]
 			},
 			"_read":{  
 			   "_static":[  
-			      "Security - read"
+			      "Registry - read"
 			   ]
 			},
 			"_modify":{  
 			   "_static":[  
-			      "Security - write"
+			      "Registry - write"
 			   ]
 			}
 		},
 		"listFields":[  
 		 {  
 		    "field":"baseData.name",
-		    "title":"Názov kategórie"
+		    "title":"Názov kategórie",
+		    "transCode":"schema.ageCategory.listFields.name"
 		 }
 	],
 	"properties":{  

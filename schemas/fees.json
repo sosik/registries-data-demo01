@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/schema#",
     "id": "uri://registries/fees#",
     "new": {
-        "title": "Nový príspevok",
+        "title": "Nový poplatok",
         "transCode": "schema.fees.new",
         "table": "fees",
         "_security": {
@@ -40,7 +40,7 @@
                         }
                     },
                     "membershipFee": {
-                        "title": "Výška príspevku",
+                        "title": "Výška poplatku",
                         "transCode": "schema.fees.baseData.membershipFee",
                         "type": "string",
                         "required": true

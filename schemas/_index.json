@@ -33,7 +33,7 @@
 	"events.json",
 	"competitionPart.json",
 	"schedule.json",
-	"match.json",
+	"refereeReport.json",
 	"delegateReport.json",
 	"imports.json",
 	"payments.json",

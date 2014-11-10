@@ -8,17 +8,17 @@
         "_security": {
             "_create": {
                 "_static": [
-                    "Security - write"
+                    "Registry - write"
                 ]
             },
             "_read": {
                 "_static": [
-                    "Security - read"
+                    "Registry - read"
                 ]
             },
             "_modify": {
                 "_static": [
-                    "Security - write"
+                    "Registry - write"
                 ]
             }
         },
@@ -271,19 +271,23 @@
         "listFields": [
             {
                 "field": "baseData.season.refData.name",
-                "title": "Sezóna"
+                "title": "Sezóna",
+                "transCode":"schema.roster.listFields.season"
             },
             {
                 "field": "baseData.competition.refData.name",
-                "title": "Súťaž"
+                "title": "Súťaž",
+                "transCode":"schema.roster.listFields.competition"
             },
             {
                 "field": "baseData.club.refData.name",
-                "title": "Klub"
+                "title": "Klub",
+                "transCode":"schema.roster.listFields.club"
             },
             {
                 "field": "baseData.prName",
-                "title": "Názov družstva"
+                "title": "Názov družstva",
+                "transCode":"schema.roster.listFields.prName"
             }
         ],
         "properties": {

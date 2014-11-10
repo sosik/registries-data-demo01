@@ -1,48 +1,53 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "id": "uri://registries/match#",
+    "id": "uri://registries/refereeReport#",
     "new": {
-        "title": "Nové stretnutie",
-        "xxtransCode": "schema.stadium.title",
-        "table": "matches",
+        "title": "Nový zápis rozhodcu",
+        "transCode": "schema.refereeReport.new",
+        "table": "refereeReports",
         "_security": {
             "_create": {
                 "_static": [
-                    "Security - write"
+                    "Registry - write"
                 ]
             },
             "_read": {
                 "_static": [
-                    "Security - read"
+                    "Registry - read"
                 ]
             },
             "_modify": {
                 "_static": [
-                    "Security - write"
+                    "Registry - write"
                 ]
             }
         },
         "listFields": [
             {
                 "field": "baseData.homeClub.refData.name",
-                "title": "Domáce družstvo"
+                "title": "Domáce družstvo",
+                "transCode": "schema.refereeReport.listFields.homeClub"
             },
             {
                 "field": "baseData.awayClub.refData.name",
-                "title": "Hosťujúce družstvo"
+                "title": "Hosťujúce družstvo",
+                "transCode": "schema.refereeReport.listFields.awayClub"
             },
             {
                 "field": "baseData.matchDate.refData.name",
-                "title": "Termín"
+                "title": "Termín",
+                "transCode": "schema.refereeReport.listFields.date"
             }
         ],
         "properties": {
             "baseData": {
-                "title": "Základné informácie",
+                "title": "Základné údaje",
+                "transCode": "schema.refereeReport.baseData",
                 "type": "object",
                 "properties": {
                     "homeClub": {
                         "title": "Domáce družstvo",
+                        "transCode": "schema.refereeReport.baseData.homeClub",
                         "type": "object",
                         "required": true,
                         "$objectLink": {
@@ -52,6 +57,7 @@
                     },
                     "awayClub": {
                         "title": "Hosťujúce družstvo",
+                        "transCode": "schema.refereeReport.baseData.awayClub",
                         "type": "object",
                         "required": true,
                         "$objectLink": {
@@ -61,6 +67,7 @@
                     },
                     "matchDate": {
                         "title": "Termín stretnutia",
+                        "transCode": "schema.refereeReport.baseData.matchDate",
                         "type": "object",
                         "required": true,
                         "$objectLink": {
@@ -70,38 +77,45 @@
                     },
                     "halfTimeScoreHome": {
                         "title": "Polčasové skóre domáci",
+                        "transCode": "schema.refereeReport.baseData.halfTimeScoreHome",
                         "type": "string",
                         "required": false
                     },
                     "halfTimeScoreAway": {
                         "title": "Polčasové skóre hostia",
+                        "transCode": "schema.refereeReport.baseData.halfTimeScoreAway",
                         "type": "string",
                         "required": false
                     },
                     "fullTimeScoreHome": {
                         "title": "Výsledok domáci",
+                        "transCode": "schema.refereeReport.baseData.fullTimeScoreHome",
                         "type": "string",
                         "required": false
                     },
                     "fullTimeScoreAway": {
                         "title": "Výsledok hostia",
+                        "transCode": "schema.refereeReport.baseData.fullTimeScoreAway",
                         "type": "string",
                         "required": false
                     },
                     "matchBegin": {
                         "title": "Začiatok stretnutia",
+                        "transCode": "schema.refereeReport.baseData.matchBegin",
                         "type": "string",
                         "required": true
                     },
                     "attendance": {
                         "title": "Návštevnosť",
+                        "transCode": "schema.refereeReport.baseData.attendance",
                         "type": "string",
                         "required": false
                     },
                     "stadium": {
                         "title": "Štadion",
+                        "transCode": "schema.refereeReport.baseData.stadium",
                         "type": "object",
-                        "required": true,
+                        "required": false,
                         "$objectLink": {
                             "registry": "stadiums",
                             "name": "baseData.name"
@@ -111,12 +125,14 @@
             },
             "delegatedPerson": {
                 "title": "Delegované osoby",
+                "transCode": "schema.refereeReport.delegatedPerson",
                 "type": "object",
                 "properties": {
 	                "referee": {
 		                "title": "Rozhodca",
+                        "transCode": "schema.refereeReport.delegatedPerson.referee",
                         "type": "object",
-                        "required": true,
+                        "required": false,
                         "$objectLink": {
                             "registry": "people",
                             "surName": "baseData.surName",
@@ -132,6 +148,7 @@
                     },
 	                "aReferee1": {
 		                "title": "Asistent rozhodcu",
+                        "transCode": "schema.refereeReport.delegatedPerson.aReferee1",
                         "type": "object",
                         "required": false,
                         "$objectLink": {
@@ -149,6 +166,7 @@
                     },
 	                "aReferee2": {
 		                "title": "Asistent rozhodcu",
+                        "transCode": "schema.refereeReport.delegatedPerson.aReferee2",
                         "type": "object",
                         "required": false,
                         "$objectLink": {
@@ -166,6 +184,7 @@
                     },
 	                "delegate": {
 		                "title": "Delegát",
+                        "transCode": "schema.refereeReport.delegatedPerson.delegate",
                         "type": "object",
                         "required": false,
                         "$objectLink": {
@@ -183,55 +202,20 @@
                     }
                 }
             },
-            "additionalInfoHome":{
-                "title": "Doplňujúce informácie domáci",
-                "type": "object",
-                "properties": {
-	                "approvalHome": {
-	                    "title": "Súhlas vedúceho",
-	                    "xxtransCode": "schema.people.title.after",
-	                    "type": "string",
-	                    "required": false
-	                },
-	                "objectionsHome": {
-	                    "title": "Námietky",
-	                    "xxtransCode": "schema.people.title.after",
-	                    "type": "string",
-	                    "required": false
-	                }
-                }
-            },
-            "additionalInfoAway":{
-                "title": "Doplňujúce informácie hostia",
-                "type": "object",
-                "properties": {
-	                "approvalAway": {
-	                    "title": "Súhlas vedúceho",
-	                    "xxtransCode": "schema.people.title.after",
-	                    "type": "string",
-	                    "required": false
-	                },
-	                "objectionsAway": {
-	                    "title": "Námietky",
-	                    "xxtransCode": "schema.people.title.after",
-	                    "type": "string",
-	                    "required": false
-	                }
-                }
-            },
             "refereeReport":{
                 "title": "Správa rozhodcu",
+                "transCode": "schema.refereeReport.refereeReport",
                 "type": "object",
                 "properties": {
 	                "note": {
 	                    "title": "Popis",
-	                    "xxtransCode": "schema.people.title.after",
+	                    "transCode": "schema.refereeReport.refereeReport.note",
 	                    "type": "string",
 	                    "required": false
 	                },
 	                "state": {
 	                    "title": "Stav",
-	                    "xxtransCode": "schema.people.title.after",
+	                    "transCode": "schema.refereeReport.refereeReport.state",
 	                    "type": "string",
 	                    "required": true,
 	                    "enum": [
@@ -249,25 +233,25 @@
         }
     },
     "view": {
-        "title": "Detail stretnutia",
-        "xxtransCode": "schema.match.view",
-        "table": "matches",
+        "title": "Detail zápisu rozhodcu",
+        "transCode": "schema.refereeReport.view",
+        "table": "refereeReports",
         "listFields": {
-            "$ref": "uri://registries/match#new/listFields"
+            "$ref": "uri://registries/refereeReport#new/listFields"
         },
 		"properties": {
-            "$ref": "uri://registries/match#new/properties"
+            "$ref": "uri://registries/refereeReport#new/properties"
         }
     },
     "search": {
-        "title": "stretnutie",
-        "xxtransCode": "schema.match.search",
-        "table": "matches",
+        "title": "Zápis rozhodcu",
+        "transCode": "schema.refereeReport.search",
+        "table": "refereeReports",
         "listFields": {
-            "$ref": "uri://registries/match#new/listFields"
+            "$ref": "uri://registries/refereeReport#new/listFields"
         },
         "properties": {
-            "$ref": "uri://registries/match#new/properties"
+            "$ref": "uri://registries/refereeReport#new/properties"
         }
     }
 }

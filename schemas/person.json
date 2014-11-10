@@ -15,6 +15,9 @@
 			"photoInfo": {
 				"$ref": "uri://registries/people#person/properties/photoInfo"
 			},
+			"contactInfo": {
+				"$ref": "uri://registries/people#person/properties/contactInfo"
+			},
 			"player": {
 				"$ref": "uri://registries/people#person/properties/player"
 			},
@@ -26,9 +29,6 @@
 			},
 			"officer": {
 				"$ref": "uri://registries/people#person/properties/officer"
-			},
-			"contactInfo": {
-				"$ref": "uri://registries/people#person/properties/contactInfo"
 			}
 		}
 	},
@@ -46,6 +46,9 @@
 			"photoInfo": {
 				"$ref": "uri://registries/people#person/properties/photoInfo"
 			},
+			"contactInfo": {
+				"$ref": "uri://registries/people#person/properties/contactInfo"
+			},
 			"player": {
 				"$ref": "uri://registries/people#person/properties/player"
 			},
@@ -57,9 +60,6 @@
 			},
 			"officer": {
 				"$ref": "uri://registries/people#person/properties/officer"
-			},
-			"contactInfo": {
-				"$ref": "uri://registries/people#person/properties/contactInfo"
 			}
         }
 	},

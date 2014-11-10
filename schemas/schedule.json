@@ -3,51 +3,62 @@
     "id": "uri://registries/schedule#",
     "new": {
         "title": "Nový termín",
-        "xxtransCode": "schema.stadium.title",
+        "transCode": "schema.schedule.new",
         "table": "schedules",
         "_security": {
             "_create": {
                 "_static": [
-                    "Security - write"
+                    "Registry - write"
                 ]
             },
             "_read": {
                 "_static": [
-                    "Security - read"
+                    "Registry - read"
                 ]
             },
             "_modify": {
                 "_static": [
-                    "Security - write"
+                    "Registry - write"
                 ]
             }
         },
         "listFields": [
             {
                 "field": "baseData.name",
-                "title": "Názov termínu"
+                "title": "Názov termínu",
+                "transCode": "schema.schedule.listFields.name"
             },
             {
                 "field": "baseData.competitionPart.refData.name",
-                "title": "Názov časti súťaže"
+                "title": "Názov časti súťaže",
+                "transCode": "schema.schedule.listFields.competitionPart"
             },
             {
                 "field": "baseData.competitionPart.refData.name",
-                "title": "Súťaž"
+                "title": "Súťaž",
+                "transCode": "schema.schedule.listFields.competition"
+            },
+            {
+                "field": "baseData.date",
+                "title": "Dátum",
+                "transCode": "schema.schedule.listFields.date"
             }
         ],
         "properties": {
             "baseData": {
                 "title": "Základné údaje",
+                "transCode": "schema.schedule.baseData",
                 "type": "object",
                 "properties": {
                     "name": {
                         "title": "Názov",
+                        "transCode": "schema.schedule.baseData.name",
 	                    "type": "string",
 	                    "required": true
 	                },
                     "competitionPart": {
-                        "title": "Vyberte časť súťaže",
+                        "title": "Časť súťaže",
+                        "transCode": "schema.schedule.baseData.competitionPart",
                         "type": "string",
                         "required": true,
                         "$objectLink": {
@@ -58,6 +69,7 @@
                     },
                     "date": {
                         "title": "Dátum",
+                        "transCode": "schema.schedule.baseData.date",
 	                    "type": "string",
 	                    "required": true,
 	                    "render": {
@@ -70,7 +82,7 @@
     },
     "view": {
         "title": "Detail termínu stretnutia",
-        "xxtransCode": "schema.stadium.title",
+        "transCode": "schema.schedule.view",
         "table": "schedules",
         "listFields": {
             "$ref": "uri://registries/schedule#new/listFields"
@@ -81,7 +93,7 @@
     },
     "search": {
         "title": "Termín",
-        "xxtransCode": "schema.stadium.title",
+        "transCode": "schema.schedule.search",
         "table": "schedules",
         "listFields": {
             "$ref": "uri://registries/schedule#new/listFields"
